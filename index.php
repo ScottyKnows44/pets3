@@ -38,7 +38,7 @@ $f3-> route('GET /summary', function (){
     echo $view->render('views/summary.html');
 });
 
-$f3->route('GET /order2 ', function(){
+$f3->route('GET|POST /order2 ', function($f3){
     $view = new Template();
     echo $view->render('views/form2.html');
 });
