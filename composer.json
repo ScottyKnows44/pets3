@@ -1,0 +1,16 @@
+{
+  "name":"sthompson/328/pet3",
+  "authors": [
+    {
+      "name": "Scott Thompson",
+      "email": "sthompson42@mail.greenriver.edu"
+    },
+    {
+      "name": "Dmytro Boichuk",
+      "email": "DmytroBoichuk@mail.greenriver.edu"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
