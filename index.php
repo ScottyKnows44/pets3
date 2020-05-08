@@ -7,6 +7,8 @@ require_once('vendor/autoload.php');
 //Instantiate the F3 Base class
 $f3 = Base::instance();
 
+$f3->set('colors', array('pink', 'green', 'blue'));
+
 //run $f3
 $f3->route('GET / ', function(){
     $view = new Template();
@@ -23,7 +25,7 @@ $f3->route('GET|POST /order ', function($f3){
         } else{
             $_SESSION['pet'] = $_POST['pet'];
             $_SESSION['color'] = $_POST['color'];
-            $f3->reroute('summary');
+            $f3->reroute('order2');
             session_destroy();
         }
     }
@@ -35,5 +37,12 @@ $f3-> route('GET /summary', function (){
     $view = new Template();
     echo $view->render('views/summary.html');
 });
+
+$f3->route('GET /order2 ', function(){
+    $view = new Template();
+    echo $view->render('views/form2.html');
+});
+
+
 
 $f3-> run();

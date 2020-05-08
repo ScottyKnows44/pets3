@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form 2</title>
+</head>
+<body>
+<select class="form-control" name="color" id="color">
+    <option>-- Select a color --</option>
+    <repeat group="{{ @colors }}" value="{{ @colorOption }}">
+        <option>{{ @colorOption }}</option>
+    </repeat>
+</select>
+
+</body>
+</html>
