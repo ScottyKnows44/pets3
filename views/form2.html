@@ -24,17 +24,20 @@
 
     <form action="#" method="post" class="form-horizontal">
 
-        <!-- get food -->
-
-
-        <!-- get meal -->
         <div class="form-group">
             <label class="col-sm-2 control-label">Select a color</label>
+
+            <check if="{{ isset@errors['color'] }}" >
+                <p>{{ @errors['color'] }}</p>
+            </check>
 
             <select class="form-control" name="color" id="color">
                 <option>-- Select a color --</option>
                 <repeat group="{{ @colors }}" value="{{ @colorOption }}">
-                    <option>{{ @colorOption }}</option>
+                    <option>
+                    <check if="{{ @color Option == @color }}">selected</check>
+                        {{ @colorOption }}
+                    </option>
                 </repeat>
             </select>
         </div>
