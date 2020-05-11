@@ -27,7 +27,7 @@
         <div class="form-group">
             <label class="col-sm-2 control-label">Select a color</label>
 
-            <check if="{{ isset@errors['color'] }}" >
+            <check if="{{ isset(@errors['color']) }}" >
                 <p>{{ @errors['color'] }}</p>
             </check>
 
@@ -35,7 +35,7 @@
                 <option>-- Select a color --</option>
                 <repeat group="{{ @colors }}" value="{{ @colorOption }}">
                     <option>
-                    <check if="{{ @color Option == @color }}">selected</check>
+                    <check if="{{ @colorOption == @color }}">selected</check>
                         {{ @colorOption }}
                     </option>
                 </repeat>
